@@ -1,0 +1,49 @@
+<view class="container cards-list">
+    <view wx:for="{{cards}}" class="cards-container" wx:key="index" bindtap="showGoods" data-object-id="{{item.goods.objectId}}">
+    	<view class="cards-item" style="left: {{itemLefts[index]}}px;" data-index="{{index}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
+	    	<!-- 复选框图标 -->
+    	<icon id="iconfont" type="{{item.selected ? 'success_circle' : 'circle'}}" size="20" catchtap="bindCheckbox" data-index="{{index}}"/>
+			<view>
+			<!-- 缩略图 -->
+				<image class="cards-image" src="{{item.cover}}" mode="aspectFill"/>
+			</view>
+			<view class="cards-text">
+				<!-- 商品标题 -->
+        <view class="cards-head">
+        <text class="cards-title">{{item.bookName}}</text>
+        <button type="warn" class="delete-button" catchtap="delete" data-object-id="{{item.id}}">删除</button>
+        </view>
+				
+				<view class="cards-subtitle">
+				<!-- 价格 -->
+				  	<text class="cards-price">{{item.recycPrice}}</text>
+				  	<!-- 数量加减 -->
+				  	<view>
+				      <view class="stepper">
+						<!-- 减号 -->
+						<text class="{{minusStatuses[index]}}" data-index="{{index}}" catchtap="bindMinus">-</text>
+						<!-- 数值 -->
+						<input type="number" data-index="{{index}}" catchchange="bindManual" catchtap="bindManualTapped" value="{{item.quantity}}" />
+						<!-- 加号 -->
+						<text class="normal" data-index="{{index}}" catchtap="bindPlus">+</text>
+					  </view>
+				  	</view>
+				</view>
+			</view>
+      	</view>
+      	
+        
+    </view>
+
+
+
+
+</view>
+<view class="cards-footer">
+	<view class="select-and-amount" bindtap="bindSelectAll">
+		<icon type="{{selectedAllStatus ? 'success_circle' : 'circle'}}" size="18"/>
+		<text>全选</text>
+		<text>{{total}}</text>
+	</view>
+	<view class="button" bindtap="bindCheckout">立即结算</view>
+</view>

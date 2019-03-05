@@ -1,0 +1,16 @@
+        <view class="weui-cells__title">选择</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd" style="width: 105px">
+                    <picker bindchange="bindSchoolsChange" value="{{index}}" range="{{schools}}" mode = "selector">
+                        <view class="weui-select">{{schools[index]}}</view>
+                    </picker>
+                </view>
+                <view class="weui-cell__bd weui-cell__bd_in-select-before">
+                    <input class="weui-input" placeholder="详细地址" bindinput="bindKeyInput"  /> 
+                </view>
+            </view>
+        </view>
+         <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="saveAddress">确定</button>
+        </view>

@@ -1,0 +1,125 @@
+@import "../../common/lib/weui.wxss";
+.weui-cell__bd{
+  min-height: 48rpx;
+  word-break: break-all;
+}
+.bgImage{
+width: 100%;
+height: 1000rpx;
+filter: blur(150px);
+position: absolute;
+top: 0;
+-webkit-filter: blur(150px);
+-moz-filter: blur(150px);
+-ms-filter: blur(150px);
+-o-filter: blur(150px);
+left: 0;
+}
+.container{
+width: 100%;
+padding: 0  50rpx;
+}
+.book-if_container{
+width: 100%;
+height: 120px;
+padding:20px;
+}
+.bookIf{
+width:100%;
+height:380px;
+margin-top:20PX; 
+display: flex;
+flex-direction:row;
+align-items: center;
+justify-content: center;
+}
+
+.bookIf_RIGHT{
+width: 100%;
+height: 100%;
+position: relative;
+justify-content: center;
+align-items: center;
+}
+.title_RIGHT{
+height: 20%;
+width:100%;
+align-items: center;
+justify-content: center;
+display: flex;
+border: 1px dashed gray;
+}
+.content{
+height: 45%;
+width:100%;
+align-items: center;
+display: flex;
+justify-content: center;
+border: 1px dashed gray;
+margin: 10px 0;
+}
+.price{
+height: 25%;
+width:100%;
+flex-direction:row;
+display: flex;
+justify-content: center;
+}
+.bookImage{
+width:35%;
+height:90%;
+box-shadow: 0px 0px 5px 2px  #dad4d4;
+}
+.M_P{
+height:80%;
+width:50%;
+align-items: flex-end;
+justify-content:flex-end;
+display: flex;
+position: relative;
+border: 1px dashed gray;
+margin: 0  10rpx 0 0;
+}
+.R_P{
+height: 80%;
+width:50%;
+align-items: flex-end;
+justify-content:flex-end;
+display: flex;
+position: relative;
+margin: 0 0 0 0;
+border: 1px dashed gray;
+}
+.carts-price {
+	color: #f60;
+	font-size:14px;
+	line-height: 22px;
+  position: absolute;
+  right: 15%;
+  bottom: 15%;
+}
+/*人民币符号*/
+.carts-price:before, .select-and-amount text:last-child:before {
+	content: '￥';	
+}
+.priceTag{
+position: absolute;
+top:24%;
+left: 15%;
+font-size: 12px;
+}
+.textview_hide{
+ display: none;
+}
+.textview_show{
+ display: block;
+}
+
+.textview{
+  width:100%;
+  border: 1px dashed gray;
+height:260px;
+display: flex;
+align-items: center;
+justify-content: center;
+}

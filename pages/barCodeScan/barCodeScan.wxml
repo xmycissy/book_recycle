@@ -1,0 +1,42 @@
+
+<view class="container">
+<view  class="bookIf">
+<view class="{{showView?'textview_show':'textview_hide'}} "  style='  width:100%;'>
+<view class="textview">
+<view >shoushuyunshoushuyun 
+</view>
+</view> 
+</view>
+<view  class="bookIf_RIGHT {{showView?'textview_hide':'textview_show'}}">
+<image class="bgImage" src="{{cover}}" mode="aspectFill"/>
+<view class="title_RIGHT ">
+<text>{{book.bookName}}</text>
+</view>
+<view class="content">
+<image class="bookImage" src="{{cover}}" mode="aspectFill"/>
+</view>
+<view class="price">
+  <view class='M_P'>
+    <text class='priceTag'>市场价</text>
+    <text class="carts-price">{{book.MP}}</text>
+  </view>
+  <view class='R_P'>
+    <text class='priceTag'>收购价</text>
+    <text class="carts-price">{{book.RP}}</text>
+  </view>
+  </view>
+</view>
+</view>
+  <view class="page-body">
+    <view class="weui-cells__title">扫码结果</view>
+    <view class="weui-cells weui-cells_after-title" style='background-color:transparent;'>
+      <view class="weui-cell" style='background-color:transparent;'>
+        <view class="weui-cell__bd"  >{{result}}</view>
+      </view>
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap="scanCode">扫一扫</button>
+    </view>
+  </view>
+</view>
+

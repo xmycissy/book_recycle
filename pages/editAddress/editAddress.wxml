@@ -1,0 +1,3 @@
+<!--pages/editAddress/editAddress.wxml-->
+
+<button class="submit" type="primary" bindtap="editAddress" >编辑地址</button>
